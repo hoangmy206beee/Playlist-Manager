@@ -102,10 +102,13 @@ public:
     }
 
     // Xóa bài khỏi thư viện
-    void xoaBai(const string& ten, const string& caSi) {
-        goc = xoa(goc, ten, caSi);
-        cout << "Da xoa bai khoi thu vien.\n";
-    }
+    void xoaKhoiPlaylist() {
+    string t, c;
+    cout << "Nhap ten bai: "; getline(cin, t);
+    cout << "Nhap ca si: "; getline(cin, c);
+    playlist.xoa(t, c);
+}
+
 
     // In thư viện
     void inThuVien() {
