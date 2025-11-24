@@ -102,12 +102,14 @@ public:
     }
 
     // Xóa bài khỏi thư viện
-    void xoaKhoiPlaylist() {
-    string t, c;
-    cout << "Nhap ten bai: "; getline(cin, t);
-    cout << "Nhap ca si: "; getline(cin, c);
-    playlist.xoa(t, c);
-}
+ void xoaKhoiThuVien() {
+     string t, c;
+     cout << "Nhap ten bai: "; getline(cin, t);
+     cout << "Nhap ca si: "; getline(cin, c);
+     thuVien.xoaBai(t, c);
+     luuFile(); // 🟢 Ghi lại file ngay sau khi xóa
+ }
+
 
 
     // In thư viện
