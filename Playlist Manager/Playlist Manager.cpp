@@ -102,15 +102,10 @@ public:
     }
 
     // Xóa bài khỏi thư viện
- void xoaKhoiThuVien() {
-     string t, c;
-     cout << "Nhap ten bai: "; getline(cin, t);
-     cout << "Nhap ca si: "; getline(cin, c);
-     thuVien.xoaBai(t, c);
-     luuFile(); // 🟢 Ghi lại file ngay sau khi xóa
- }
-
-
+    void xoaBai(const string& ten, const string& caSi) {
+        goc = xoa(goc, ten, caSi);
+        cout << "Da xoa bai khoi thu vien.\n";
+    }
 
     // In thư viện
     void inThuVien() {
@@ -303,7 +298,9 @@ public:
         cout << "Nhap ten bai: "; getline(cin, t);
         cout << "Nhap ca si: "; getline(cin, c);
         thuVien.xoaBai(t, c);
+        luuFile(); // 🟢 Ghi lại file ngay sau khi xóa
     }
+
 
     // Xóa bài khỏi playlist
     void xoaKhoiPlaylist() {
